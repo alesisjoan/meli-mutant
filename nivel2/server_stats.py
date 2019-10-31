@@ -10,10 +10,14 @@ r = redis.Redis(host='localhost', port=6379, db=0)
 web.config.debug = False
 
 urls = (
+    '/', 'Hello',
     '/stats', 'Stats',
 )
 app = web.application(urls, globals())
 
+class Hello:
+    def GET(self):
+        return "Hello Alesis"
 
 class Stats:
 
