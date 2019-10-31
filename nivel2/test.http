@@ -1,0 +1,10 @@
+POST /mutant HTTP/1.1
+Host: localhost:8082
+Content-Type: text/plain; charset=utf-8
+Cache-Control: no-cache
+
+{"dna":["ATGCGA","CAGTGC","TTATGT","AGAAGG","CCCCTA","TCACTG"]}
+
+###
+
+

@@ -1,0 +1,4 @@
+numpy==1.13.3
+PyYAML==3.12
+redis==3.3.11
+web.py==0.40
