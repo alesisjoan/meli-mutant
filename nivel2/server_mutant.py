@@ -35,14 +35,14 @@ class Mutant:
 
 
 class DNAExpertController(web.application):
-    def run(self, port=8082, *middleware):
+    def run(self, port=8080, *middleware):
         func = self.wsgifunc(*middleware)
         return web.httpserver.runsimple(func, ('0.0.0.0', port))
 
 
 def run():
     app = DNAExpertController(urls, globals())
-    app.run(port=8082)
+    app.run(port=8080)
 
 
 if __name__ == "__main__":
