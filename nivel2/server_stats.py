@@ -3,7 +3,6 @@
 import web
 import json
 import json
-from nivel1.mutant import DNAExpert
 import redis
 
 r = redis.Redis(host='localhost', port=6379, db=0)

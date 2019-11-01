@@ -3,8 +3,8 @@
 import web
 import json
 import json
-from nivel1.mutant import DNAExpert
-from nivel1.mutant import helmet_ascii
+from ..nivel1.mutant import DNAExpert
+from ..nivel1.mutant import helmet_ascii
 import redis
 
 r = redis.Redis(host='localhost', port=6379, db=0)
