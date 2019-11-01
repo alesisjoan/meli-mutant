@@ -4,8 +4,10 @@ import web
 import json
 import json
 import redis
+import os
 
-r = redis.Redis(host='localhost', port=6379, db=0)
+
+# r = redis.Redis(host='localhost', port=6379, db=0)
 web.config.debug = False
 
 urls = (
@@ -21,6 +23,12 @@ class Stats:
         count_human_dna = 0
         count_mutant_dna = 0
         ratio = 0
+        return {
+            'count_mutant_dna': count_mutant_dna,
+            'count_human_dna': count_human_dna,
+            'ratio': ratio
+        }
+        """
         for key in r.keys():
             result = r.get(key)
             count_human_dna += not int(result)
@@ -31,17 +39,18 @@ class Stats:
             'count_human_dna': count_human_dna,
             'ratio': ratio
         }
+        """
 
 
 class StatsController(web.application):
-    def run(self, port=8082, *middleware):
+    def run(self, port=8080, *middleware):
         func = self.wsgifunc(*middleware)
         return web.httpserver.runsimple(func, ('0.0.0.0', port))
 
 
 def run():
     app = StatsController(urls, globals())
-    app.run(port=8083)
+    app.run(port=os.environ.get("PORT", 8080))
 
 
 if __name__ == "__main__":
