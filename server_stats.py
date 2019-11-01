@@ -50,7 +50,7 @@ class StatsController(web.application):
 
 def run():
     app = StatsController(urls, globals())
-    app.run(port=os.environ.get("PORT", 8080))
+    app.run(port=8080))
 
 
 if __name__ == "__main__":
