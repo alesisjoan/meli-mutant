@@ -1,1 +1,1 @@
-web: python3 server_stats.py 8080
+worker: redis-server
