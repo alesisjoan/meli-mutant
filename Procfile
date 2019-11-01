@@ -1,1 +1,1 @@
-web: python3 nivel2.server_stats
+web: python3 nivel2.server_stats.py
