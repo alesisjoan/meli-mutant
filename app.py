@@ -42,7 +42,7 @@ class DNAExpertController(web.application):
 
 def run():
     app = DNAExpertController(urls, globals())
-    app.run(port=8080)
+    app.run(port=5000)
 
 
 if __name__ == "__main__":
