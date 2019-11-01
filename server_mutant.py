@@ -2,9 +2,8 @@
 # pip3 install git+https://github.com/webpy/webpy#egg=web.py
 import web
 import json
-import json
-from ..nivel1.mutant import DNAExpert
-from ..nivel1.mutant import helmet_ascii
+from mutant import DNAExpert
+from mutant import helmet_ascii
 import redis
 
 r = redis.Redis(host='localhost', port=6379, db=0)
@@ -18,6 +17,7 @@ app = web.application(urls, globals())
 dna_expert = DNAExpert()
 
 print(helmet_ascii)
+
 
 class Mutant:
 
