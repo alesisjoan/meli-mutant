@@ -15,9 +15,6 @@ urls = (
 )
 app = web.application(urls, globals())
 
-class Hello:
-    def GET(self):
-        return "Hello Alesis"
 
 class Stats:
 
