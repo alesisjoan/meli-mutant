@@ -1,5 +1,4 @@
 #!/usr/bin/env python3.6
-# pip3 install git+https://github.com/webpy/webpy#egg=web.py
 import web
 import json
 from mutant import DNAExpert
@@ -55,7 +54,6 @@ class Stats:
             'count_human_dna': count_human_dna,
             'ratio': ratio
         }
-
 
 
 class Controller(web.application):
