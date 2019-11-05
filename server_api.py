@@ -11,7 +11,7 @@ config = ConfigParser()
 config_file = "stats.conf"
 config.read(config_file)
 
-r = redis.Redis(host=os..environ.get("REDIS") or config.get('REDIS', 'ip') or 'localhost', port=6379, db=0)
+r = redis.Redis(host=os.environ.get("REDIS") or config.get('REDIS', 'ip') or 'localhost', port=6379, db=0)
 web.config.debug = False
 
 urls = (
