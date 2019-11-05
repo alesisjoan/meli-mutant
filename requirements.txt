@@ -1,4 +1,4 @@
 numpy==1.13.3
-PyYAML==3.12
+PyYAML==5.1
 redis==3.3.11
 git+https://github.com/webpy/webpy#egg=web.py
