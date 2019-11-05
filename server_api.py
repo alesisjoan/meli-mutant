@@ -17,14 +17,10 @@ web.config.debug = False
 urls = (
     '/mutant', 'Mutant',
     '/stats', 'Stats',
-    '/favicon.ico', 'icon',
 )
 app = web.application(urls, globals())
 
 dna_expert = DNAExpert()
-
-class icon:
-    def GET(self): raise web.seeother('magneto.ico')
 
 
 class Mutant:
