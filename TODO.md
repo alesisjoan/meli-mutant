@@ -1,0 +1,3 @@
+- [ ] Estudiar reducir matrices 
+- [ ] Estudiar Binary search
+- [ ] Balanceador NGinx
