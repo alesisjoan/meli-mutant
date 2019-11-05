@@ -1,10 +1,10 @@
-######TL/DR
+## TL/DR
 
 ```
 python3 server_api.py
 ```
 
-#Instrucciones de ejecucion
+# Instrucciones de ejecucion
 
 Se requiere una instancia de Redis:
 
@@ -33,7 +33,7 @@ export PORT=[puerto]
 python3 server_api.py
 ```
 
-##Demo
+## Demo
 
 Desde un entorno de pruebas para requests HTTP 
 
@@ -53,16 +53,16 @@ Content-Type: text/plain; charset=utf-8
 Cache-Control: no-cache
 ```
 
-##Testing
+## Testing
 
 >python3 test.py
 
-##Diagrama de Secuencia
+## Diagrama de Secuencia
 
 ![Secuencia](/docs/sequence_isMutant.png)
 ![Secuencia](/docs/sequence_stats.png)
 
-##Diagrama de Arquitectura del Sistema
+## Diagrama de Arquitectura del Sistema
 
 ![Secuencia](/docs/architecture.png)
 

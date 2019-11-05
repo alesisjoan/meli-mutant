@@ -1,6 +1,6 @@
 POST /mutant HTTP/1.1
-Host: https://possessed-spirit-56339.herokuapp.com:8082
-Content-Type: text/plain; charset=utf-8
+Host: https://possessed-spirit-56339.herokuapp.com
+Content-Type: application/json
 Cache-Control: no-cache
 
 {"dna":["ATGCGA","CAGTGT","TTATGT","AGAAGT","CCCCTT","TCACTG"]}
@@ -8,7 +8,7 @@ Cache-Control: no-cache
 ###
 
 POST /mutant HTTP/1.1
-Host: https://possessed-spirit-56339.herokuapp.com:8082
+Host: https://possessed-spirit-56339.herokuapp.com
 Content-Type: text/plain; charset=utf-8
 Cache-Control: no-cache
 
@@ -17,7 +17,7 @@ Cache-Control: no-cache
 ###
 
 POST /mutant HTTP/1.1
-Host: https://possessed-spirit-56339.herokuapp.com:8082
+Host: https://possessed-spirit-56339.herokuapp.com
 Content-Type: text/plain; charset=utf-8
 Cache-Control: no-cache
 
@@ -27,7 +27,7 @@ Cache-Control: no-cache
 
 
 POST /mutant HTTP/1.1
-Host: https://possessed-spirit-56339.herokuapp.com:8082
+Host: https://possessed-spirit-56339.herokuapp.com
 Content-Type: text/plain; charset=utf-8
 Cache-Control: no-cache
 
@@ -36,7 +36,7 @@ Cache-Control: no-cache
 ###
 
 GET /stats HTTP/1.1
-Host: https://possessed-spirit-56339.herokuapp.com:8082
+Host: https://possessed-spirit-56339.herokuapp.com
 Content-Type: text/plain; charset=utf-8
 Cache-Control: no-cache
 
