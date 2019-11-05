@@ -24,7 +24,7 @@ app = web.application(urls, globals())
 dna_expert = DNAExpert()
 
 class icon:
-    def GET(self): return 'https://icon-library.net//images/xmen-icon/xmen-icon-16.jpg'
+    def GET(self): raise web.seeother('magneto.jpg')
 
 
 class Mutant:
