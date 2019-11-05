@@ -3,8 +3,45 @@ Host: https://possessed-spirit-56339.herokuapp.com:8082
 Content-Type: text/plain; charset=utf-8
 Cache-Control: no-cache
 
+{"dna":["ATGCGA","CAGTGT","TTATGT","AGAAGT","CCCCTT","TCACTG"]}
+
+###
+
+POST /mutant HTTP/1.1
+Host: https://possessed-spirit-56339.herokuapp.com:8082
+Content-Type: text/plain; charset=utf-8
+Cache-Control: no-cache
+
 {"dna":["ATGCGA","CAGTGC","TTATGT","AGAAGG","CCCCTA","TCACTG"]}
 
 ###
+
+POST /mutant HTTP/1.1
+Host: https://possessed-spirit-56339.herokuapp.com:8082
+Content-Type: text/plain; charset=utf-8
+Cache-Control: no-cache
+
+{"dna":["ATGCGA","CAGTGC","TTATGT","AGAAGG","CCCCTA","TCACTG"]}
+
+###
+
+
+POST /mutant HTTP/1.1
+Host: https://possessed-spirit-56339.herokuapp.com:8082
+Content-Type: text/plain; charset=utf-8
+Cache-Control: no-cache
+
+{"dna":["ATGCGA","CAGTGC","TTATGT","AGAAGG","CCCCTA","TCACTG"]}
+
+###
+
+GET /stats HTTP/1.1
+Host: https://possessed-spirit-56339.herokuapp.com:8082
+Content-Type: text/plain; charset=utf-8
+Cache-Control: no-cache
+
+###
+
+
 
 

@@ -1,0 +1,950 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Coverage report</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="jquery.ba-throttle-debounce.min.js"></script>
+    <script type="text/javascript" src="jquery.tablesorter.min.js"></script>
+    <script type="text/javascript" src="jquery.hotkeys.js"></script>
+    <script type="text/javascript" src="coverage_html.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(coverage.index_ready);
+    </script>
+</head>
+<body class="indexfile">
+
+<div id="header">
+    <div class="content">
+        <h1>Coverage report:
+            <span class="pc_cov">23%</span>
+        </h1>
+
+        <img id="keyboard_icon" src="keybd_closed.png" alt="Show keyboard shortcuts" />
+
+        <form id="filter_container">
+            <input id="filter" type="text" value="" placeholder="filter..." />
+        </form>
+    </div>
+</div>
+
+<div class="help_panel">
+    <img id="panel_icon" src="keybd_open.png" alt="Hide keyboard shortcuts" />
+    <p class="legend">Hot-keys on this page</p>
+    <div>
+    <p class="keyhelp">
+        <span class="key">n</span>
+        <span class="key">s</span>
+        <span class="key">m</span>
+        <span class="key">x</span>
+        
+        <span class="key">c</span> &nbsp; change column sorting
+    </p>
+    </div>
+</div>
+
+<div id="index">
+    <table class="index">
+        <thead>
+            
+            <tr class="tablehead" title="Click to sort">
+                <th class="name left headerSortDown shortkey_n">Module</th>
+                <th class="shortkey_s">statements</th>
+                <th class="shortkey_m">missing</th>
+                <th class="shortkey_x">excluded</th>
+                
+                <th class="right shortkey_c">coverage</th>
+            </tr>
+        </thead>
+        
+        <tfoot>
+            <tr class="total">
+                <td class="name left">Total</td>
+                <td>22103</td>
+                <td>16967</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="5136 22103">23%</td>
+            </tr>
+        </tfoot>
+        <tbody>
+            
+            <tr class="file">
+                <td class="name left"><a href="mutant_py.html">mutant.py</a></td>
+                <td>84</td>
+                <td>15</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="69 84">82%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_usr_lib_python3_dist-packages_numpy___config___py.html">/usr/lib/python3/dist-packages/numpy/__config__.py</a></td>
+                <td>32</td>
+                <td>12</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="20 32">62%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_usr_lib_python3_dist-packages_numpy___init___py.html">/usr/lib/python3/dist-packages/numpy/__init__.py</a></td>
+                <td>58</td>
+                <td>7</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="51 58">88%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_usr_lib_python3_dist-packages_numpy__distributor_init_py.html">/usr/lib/python3/dist-packages/numpy/_distributor_init.py</a></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="0 0">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_usr_lib_python3_dist-packages_numpy__globals_py.html">/usr/lib/python3/dist-packages/numpy/_globals.py</a></td>
+                <td>11</td>
+                <td>1</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="10 11">91%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_usr_lib_python3_dist-packages_numpy__import_tools_py.html">/usr/lib/python3/dist-packages/numpy/_import_tools.py</a></td>
+                <td>226</td>
+                <td>204</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="22 226">10%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_usr_lib_python3_dist-packages_numpy_add_newdocs_py.html">/usr/lib/python3/dist-packages/numpy/add_newdocs.py</a></td>
+                <td>278</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="278 278">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_usr_lib_python3_dist-packages_numpy_compat___init___py.html">/usr/lib/python3/dist-packages/numpy/compat/__init__.py</a></td>
+                <td>8</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="8 8">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_usr_lib_python3_dist-packages_numpy_compat__inspect_py.html">/usr/lib/python3/dist-packages/numpy/compat/_inspect.py</a></td>
+                <td>70</td>
+                <td>19</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="51 70">73%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_usr_lib_python3_dist-packages_numpy_compat_py3k_py.html">/usr/lib/python3/dist-packages/numpy/compat/py3k.py</a></td>
+                <td>78</td>
+                <td>53</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="25 78">32%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_usr_lib_python3_dist-packages_numpy_core___init___py.html">/usr/lib/python3/dist-packages/numpy/core/__init__.py</a></td>
+                <td>73</td>
+                <td>9</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="64 73">88%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_usr_lib_python3_dist-packages_numpy_core__internal_py.html">/usr/lib/python3/dist-packages/numpy/core/_internal.py</a></td>
+                <td>396</td>
+                <td>314</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="82 396">21%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_usr_lib_python3_dist-packages_numpy_core__methods_py.html">/usr/lib/python3/dist-packages/numpy/core/_methods.py</a></td>
+                <td>87</td>
+                <td>65</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="22 87">25%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_usr_lib_python3_dist-packages_numpy_core_arrayprint_py.html">/usr/lib/python3/dist-packages/numpy/core/arrayprint.py</a></td>
+                <td>410</td>
+                <td>337</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="73 410">18%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_usr_lib_python3_dist-packages_numpy_core_defchararray_py.html">/usr/lib/python3/dist-packages/numpy/core/defchararray.py</a></td>
+                <td>356</td>
+                <td>230</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="126 356">35%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_usr_lib_python3_dist-packages_numpy_core_einsumfunc_py.html">/usr/lib/python3/dist-packages/numpy/core/einsumfunc.py</a></td>
+                <td>311</td>
+                <td>298</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="13 311">4%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_usr_lib_python3_dist-packages_numpy_core_fromnumeric_py.html">/usr/lib/python3/dist-packages/numpy/core/fromnumeric.py</a></td>
+                <td>277</td>
+                <td>198</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="79 277">29%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_usr_lib_python3_dist-packages_numpy_core_function_base_py.html">/usr/lib/python3/dist-packages/numpy/core/function_base.py</a></td>
+                <td>69</td>
+                <td>59</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="10 69">14%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_usr_lib_python3_dist-packages_numpy_core_getlimits_py.html">/usr/lib/python3/dist-packages/numpy/core/getlimits.py</a></td>
+                <td>182</td>
+                <td>91</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="91 182">50%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_usr_lib_python3_dist-packages_numpy_core_info_py.html">/usr/lib/python3/dist-packages/numpy/core/info.py</a></td>
+                <td>3</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="3 3">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_usr_lib_python3_dist-packages_numpy_core_machar_py.html">/usr/lib/python3/dist-packages/numpy/core/machar.py</a></td>
+                <td>187</td>
+                <td>178</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="9 187">5%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_usr_lib_python3_dist-packages_numpy_core_memmap_py.html">/usr/lib/python3/dist-packages/numpy/core/memmap.py</a></td>
+                <td>98</td>
+                <td>82</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="16 98">16%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_usr_lib_python3_dist-packages_numpy_core_numeric_py.html">/usr/lib/python3/dist-packages/numpy/core/numeric.py</a></td>
+                <td>562</td>
+                <td>408</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="154 562">27%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_usr_lib_python3_dist-packages_numpy_core_numerictypes_py.html">/usr/lib/python3/dist-packages/numpy/core/numerictypes.py</a></td>
+                <td>388</td>
+                <td>113</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="275 388">71%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_usr_lib_python3_dist-packages_numpy_core_records_py.html">/usr/lib/python3/dist-packages/numpy/core/records.py</a></td>
+                <td>356</td>
+                <td>315</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="41 356">12%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_usr_lib_python3_dist-packages_numpy_core_shape_base_py.html">/usr/lib/python3/dist-packages/numpy/core/shape_base.py</a></td>
+                <td>111</td>
+                <td>95</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="16 111">14%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_usr_lib_python3_dist-packages_numpy_ctypeslib_py.html">/usr/lib/python3/dist-packages/numpy/ctypeslib.py</a></td>
+                <td>193</td>
+                <td>150</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="43 193">22%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_usr_lib_python3_dist-packages_numpy_fft___init___py.html">/usr/lib/python3/dist-packages/numpy/fft/__init__.py</a></td>
+                <td>7</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="7 7">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_usr_lib_python3_dist-packages_numpy_fft_fftpack_py.html">/usr/lib/python3/dist-packages/numpy/fft/fftpack.py</a></td>
+                <td>131</td>
+                <td>106</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="25 131">19%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_usr_lib_python3_dist-packages_numpy_fft_helper_py.html">/usr/lib/python3/dist-packages/numpy/fft/helper.py</a></td>
+                <td>86</td>
+                <td>65</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="21 86">24%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_usr_lib_python3_dist-packages_numpy_fft_info_py.html">/usr/lib/python3/dist-packages/numpy/fft/info.py</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="2 2">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_usr_lib_python3_dist-packages_numpy_lib___init___py.html">/usr/lib/python3/dist-packages/numpy/lib/__init__.py</a></td>
+                <td>42</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="42 42">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_usr_lib_python3_dist-packages_numpy_lib__datasource_py.html">/usr/lib/python3/dist-packages/numpy/lib/_datasource.py</a></td>
+                <td>177</td>
+                <td>140</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="37 177">21%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_usr_lib_python3_dist-packages_numpy_lib__iotools_py.html">/usr/lib/python3/dist-packages/numpy/lib/_iotools.py</a></td>
+                <td>392</td>
+                <td>337</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="55 392">14%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_usr_lib_python3_dist-packages_numpy_lib__version_py.html">/usr/lib/python3/dist-packages/numpy/lib/_version.py</a></td>
+                <td>77</td>
+                <td>61</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="16 77">21%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_usr_lib_python3_dist-packages_numpy_lib_arraypad_py.html">/usr/lib/python3/dist-packages/numpy/lib/arraypad.py</a></td>
+                <td>372</td>
+                <td>347</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="25 372">7%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_usr_lib_python3_dist-packages_numpy_lib_arraysetops_py.html">/usr/lib/python3/dist-packages/numpy/lib/arraysetops.py</a></td>
+                <td>143</td>
+                <td>131</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="12 143">8%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_usr_lib_python3_dist-packages_numpy_lib_arrayterator_py.html">/usr/lib/python3/dist-packages/numpy/lib/arrayterator.py</a></td>
+                <td>73</td>
+                <td>60</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="13 73">18%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_usr_lib_python3_dist-packages_numpy_lib_financial_py.html">/usr/lib/python3/dist-packages/numpy/lib/financial.py</a></td>
+                <td>109</td>
+                <td>92</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="17 109">16%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_usr_lib_python3_dist-packages_numpy_lib_format_py.html">/usr/lib/python3/dist-packages/numpy/lib/format.py</a></td>
+                <td>234</td>
+                <td>206</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="28 234">12%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_usr_lib_python3_dist-packages_numpy_lib_function_base_py.html">/usr/lib/python3/dist-packages/numpy/lib/function_base.py</a></td>
+                <td>1312</td>
+                <td>1211</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="101 1312">8%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_usr_lib_python3_dist-packages_numpy_lib_index_tricks_py.html">/usr/lib/python3/dist-packages/numpy/lib/index_tricks.py</a></td>
+                <td>244</td>
+                <td>184</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="60 244">25%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_usr_lib_python3_dist-packages_numpy_lib_info_py.html">/usr/lib/python3/dist-packages/numpy/lib/info.py</a></td>
+                <td>3</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="3 3">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_usr_lib_python3_dist-packages_numpy_lib_mixins_py.html">/usr/lib/python3/dist-packages/numpy/lib/mixins.py</a></td>
+                <td>62</td>
+                <td>13</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="49 62">79%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_usr_lib_python3_dist-packages_numpy_lib_nanfunctions_py.html">/usr/lib/python3/dist-packages/numpy/lib/nanfunctions.py</a></td>
+                <td>226</td>
+                <td>200</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="26 226">12%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_usr_lib_python3_dist-packages_numpy_lib_npyio_py.html">/usr/lib/python3/dist-packages/numpy/lib/npyio.py</a></td>
+                <td>762</td>
+                <td>712</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="50 762">7%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_usr_lib_python3_dist-packages_numpy_lib_polynomial_py.html">/usr/lib/python3/dist-packages/numpy/lib/polynomial.py</a></td>
+                <td>399</td>
+                <td>336</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="63 399">16%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_usr_lib_python3_dist-packages_numpy_lib_scimath_py.html">/usr/lib/python3/dist-packages/numpy/lib/scimath.py</a></td>
+                <td>55</td>
+                <td>35</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="20 55">36%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_usr_lib_python3_dist-packages_numpy_lib_shape_base_py.html">/usr/lib/python3/dist-packages/numpy/lib/shape_base.py</a></td>
+                <td>183</td>
+                <td>157</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="26 183">14%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_usr_lib_python3_dist-packages_numpy_lib_stride_tricks_py.html">/usr/lib/python3/dist-packages/numpy/lib/stride_tricks.py</a></td>
+                <td>60</td>
+                <td>49</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="11 60">18%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_usr_lib_python3_dist-packages_numpy_lib_twodim_base_py.html">/usr/lib/python3/dist-packages/numpy/lib/twodim_base.py</a></td>
+                <td>123</td>
+                <td>100</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="23 123">19%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_usr_lib_python3_dist-packages_numpy_lib_type_check_py.html">/usr/lib/python3/dist-packages/numpy/lib/type_check.py</a></td>
+                <td>104</td>
+                <td>81</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="23 104">22%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_usr_lib_python3_dist-packages_numpy_lib_ufunclike_py.html">/usr/lib/python3/dist-packages/numpy/lib/ufunclike.py</a></td>
+                <td>28</td>
+                <td>13</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="15 28">54%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_usr_lib_python3_dist-packages_numpy_lib_utils_py.html">/usr/lib/python3/dist-packages/numpy/lib/utils.py</a></td>
+                <td>515</td>
+                <td>433</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="82 515">16%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_usr_lib_python3_dist-packages_numpy_linalg___init___py.html">/usr/lib/python3/dist-packages/numpy/linalg/__init__.py</a></td>
+                <td>6</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="6 6">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_usr_lib_python3_dist-packages_numpy_linalg_info_py.html">/usr/lib/python3/dist-packages/numpy/linalg/info.py</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="2 2">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_usr_lib_python3_dist-packages_numpy_linalg_linalg_py.html">/usr/lib/python3/dist-packages/numpy/linalg/linalg.py</a></td>
+                <td>601</td>
+                <td>529</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="72 601">12%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_usr_lib_python3_dist-packages_numpy_ma___init___py.html">/usr/lib/python3/dist-packages/numpy/ma/__init__.py</a></td>
+                <td>11</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="11 11">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_usr_lib_python3_dist-packages_numpy_ma_core_py.html">/usr/lib/python3/dist-packages/numpy/ma/core.py</a></td>
+                <td>2420</td>
+                <td>1881</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="539 2420">22%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_usr_lib_python3_dist-packages_numpy_ma_extras_py.html">/usr/lib/python3/dist-packages/numpy/ma/extras.py</a></td>
+                <td>563</td>
+                <td>472</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="91 563">16%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_usr_lib_python3_dist-packages_numpy_matrixlib___init___py.html">/usr/lib/python3/dist-packages/numpy/matrixlib/__init__.py</a></td>
+                <td>6</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="6 6">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_usr_lib_python3_dist-packages_numpy_matrixlib_defmatrix_py.html">/usr/lib/python3/dist-packages/numpy/matrixlib/defmatrix.py</a></td>
+                <td>267</td>
+                <td>213</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="54 267">20%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_usr_lib_python3_dist-packages_numpy_polynomial___init___py.html">/usr/lib/python3/dist-packages/numpy/polynomial/__init__.py</a></td>
+                <td>10</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="10 10">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_usr_lib_python3_dist-packages_numpy_polynomial__polybase_py.html">/usr/lib/python3/dist-packages/numpy/polynomial/_polybase.py</a></td>
+                <td>316</td>
+                <td>235</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="81 316">26%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_usr_lib_python3_dist-packages_numpy_polynomial_chebyshev_py.html">/usr/lib/python3/dist-packages/numpy/polynomial/chebyshev.py</a></td>
+                <td>458</td>
+                <td>396</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="62 458">14%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_usr_lib_python3_dist-packages_numpy_polynomial_hermite_py.html">/usr/lib/python3/dist-packages/numpy/polynomial/hermite.py</a></td>
+                <td>417</td>
+                <td>362</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="55 417">13%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_usr_lib_python3_dist-packages_numpy_polynomial_hermite_e_py.html">/usr/lib/python3/dist-packages/numpy/polynomial/hermite_e.py</a></td>
+                <td>414</td>
+                <td>359</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="55 414">13%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_usr_lib_python3_dist-packages_numpy_polynomial_laguerre_py.html">/usr/lib/python3/dist-packages/numpy/polynomial/laguerre.py</a></td>
+                <td>403</td>
+                <td>349</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="54 403">13%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_usr_lib_python3_dist-packages_numpy_polynomial_legendre_py.html">/usr/lib/python3/dist-packages/numpy/polynomial/legendre.py</a></td>
+                <td>411</td>
+                <td>357</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="54 411">13%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_usr_lib_python3_dist-packages_numpy_polynomial_polynomial_py.html">/usr/lib/python3/dist-packages/numpy/polynomial/polynomial.py</a></td>
+                <td>340</td>
+                <td>289</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="51 340">15%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_usr_lib_python3_dist-packages_numpy_polynomial_polyutils_py.html">/usr/lib/python3/dist-packages/numpy/polynomial/polyutils.py</a></td>
+                <td>65</td>
+                <td>48</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="17 65">26%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_usr_lib_python3_dist-packages_numpy_random___init___py.html">/usr/lib/python3/dist-packages/numpy/random/__init__.py</a></td>
+                <td>13</td>
+                <td>1</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="12 13">92%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_usr_lib_python3_dist-packages_numpy_random_info_py.html">/usr/lib/python3/dist-packages/numpy/random/info.py</a></td>
+                <td>3</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="3 3">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_usr_lib_python3_dist-packages_numpy_testing___init___py.html">/usr/lib/python3/dist-packages/numpy/testing/__init__.py</a></td>
+                <td>6</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="6 6">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_usr_lib_python3_dist-packages_numpy_testing_decorators_py.html">/usr/lib/python3/dist-packages/numpy/testing/decorators.py</a></td>
+                <td>64</td>
+                <td>56</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="8 64">12%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_usr_lib_python3_dist-packages_numpy_testing_nosetester_py.html">/usr/lib/python3/dist-packages/numpy/testing/nosetester.py</a></td>
+                <td>167</td>
+                <td>134</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="33 167">20%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_usr_lib_python3_dist-packages_numpy_testing_utils_py.html">/usr/lib/python3/dist-packages/numpy/testing/utils.py</a></td>
+                <td>791</td>
+                <td>701</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="90 791">11%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_usr_lib_python3_dist-packages_numpy_version_py.html">/usr/lib/python3/dist-packages/numpy/version.py</a></td>
+                <td>7</td>
+                <td>1</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="6 7">86%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_usr_lib_python3_dist-packages_yaml___init___py.html">/usr/lib/python3/dist-packages/yaml/__init__.py</a></td>
+                <td>133</td>
+                <td>84</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="49 133">37%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_usr_lib_python3_dist-packages_yaml_composer_py.html">/usr/lib/python3/dist-packages/yaml/composer.py</a></td>
+                <td>92</td>
+                <td>17</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="75 92">82%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_usr_lib_python3_dist-packages_yaml_constructor_py.html">/usr/lib/python3/dist-packages/yaml/constructor.py</a></td>
+                <td>444</td>
+                <td>265</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="179 444">40%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_usr_lib_python3_dist-packages_yaml_cyaml_py.html">/usr/lib/python3/dist-packages/yaml/cyaml.py</a></td>
+                <td>36</td>
+                <td>18</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="18 36">50%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_usr_lib_python3_dist-packages_yaml_dumper_py.html">/usr/lib/python3/dist-packages/yaml/dumper.py</a></td>
+                <td>23</td>
+                <td>12</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="11 23">48%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_usr_lib_python3_dist-packages_yaml_emitter_py.html">/usr/lib/python3/dist-packages/yaml/emitter.py</a></td>
+                <td>838</td>
+                <td>769</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="69 838">8%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_usr_lib_python3_dist-packages_yaml_error_py.html">/usr/lib/python3/dist-packages/yaml/error.py</a></td>
+                <td>58</td>
+                <td>42</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="16 58">28%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_usr_lib_python3_dist-packages_yaml_events_py.html">/usr/lib/python3/dist-packages/yaml/events.py</a></td>
+                <td>61</td>
+                <td>6</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="55 61">90%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_usr_lib_python3_dist-packages_yaml_loader_py.html">/usr/lib/python3/dist-packages/yaml/loader.py</a></td>
+                <td>31</td>
+                <td>12</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="19 31">61%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_usr_lib_python3_dist-packages_yaml_nodes_py.html">/usr/lib/python3/dist-packages/yaml/nodes.py</a></td>
+                <td>29</td>
+                <td>7</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="22 29">76%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_usr_lib_python3_dist-packages_yaml_parser_py.html">/usr/lib/python3/dist-packages/yaml/parser.py</a></td>
+                <td>352</td>
+                <td>192</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="160 352">45%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_usr_lib_python3_dist-packages_yaml_reader_py.html">/usr/lib/python3/dist-packages/yaml/reader.py</a></td>
+                <td>122</td>
+                <td>67</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="55 122">45%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_usr_lib_python3_dist-packages_yaml_representer_py.html">/usr/lib/python3/dist-packages/yaml/representer.py</a></td>
+                <td>244</td>
+                <td>174</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="70 244">29%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_usr_lib_python3_dist-packages_yaml_resolver_py.html">/usr/lib/python3/dist-packages/yaml/resolver.py</a></td>
+                <td>134</td>
+                <td>76</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="58 134">43%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_usr_lib_python3_dist-packages_yaml_scanner_py.html">/usr/lib/python3/dist-packages/yaml/scanner.py</a></td>
+                <td>759</td>
+                <td>434</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="325 759">43%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_usr_lib_python3_dist-packages_yaml_serializer_py.html">/usr/lib/python3/dist-packages/yaml/serializer.py</a></td>
+                <td>85</td>
+                <td>70</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="15 85">18%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_usr_lib_python3_dist-packages_yaml_tokens_py.html">/usr/lib/python3/dist-packages/yaml/tokens.py</a></td>
+                <td>76</td>
+                <td>17</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="59 76">78%</td>
+            </tr>
+            
+        </tbody>
+    </table>
+
+    <p id="no_rows">
+        No items found using the specified filter.
+    </p>
+</div>
+
+<div id="footer">
+    <div class="content">
+        <p>
+            <a class="nav" href="https://coverage.readthedocs.io">coverage.py v4.5.4</a>,
+            created at 2019-11-04 15:53
+        </p>
+    </div>
+</div>
+
+</body>
+</html>

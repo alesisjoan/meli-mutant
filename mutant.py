@@ -43,7 +43,9 @@ _logger.info(helmet_ascii)
 
 DNA_WORD_REGEX = "^([ATGC]*)$"
 MUTANT_SEQ_REGEX = r'([ATGC])\1{3}'
+
 COUNT_GT_POSITIVE = 1
+COUNT_GT_LETTERS = 3
 positive_seq = re.compile(MUTANT_SEQ_REGEX)
 
 
@@ -55,77 +57,91 @@ def get_matrix_from_array(array_string):
     matrix = [dna_word for dna_word in array_string]
     return matrix
 
+def get_diagonals(matrix):
+    n = len(matrix)
+    # diagonals_1 = []  # lower-left-to-upper-right diagonals
+    # diagonals_2 = []  # upper-left-to-lower-right diagonals
+    for p in range(2*n-1):
+        yield [matrix[p-q][q] for q in range(max(0, p - n + 1), min(p, n - 1) + 1)]
+        yield [matrix[n-p+q-1][q] for q in range(max(0, p - n + 1), min(p, n - 1) + 1)]
+
 
 class DNAExpert:
 
     def isMutant(self, matrix=[]):
 
-        def __check_matrix_order(matrix):
-            shape = numpy.shape(matrix)[0]
-            return all([shape == len(m) for m in matrix])
+        try:
+            def __check_matrix_order(matrix):
+               shape = numpy.shape(matrix)[0]
+               return all([shape == len(m) for m in matrix])
 
-        def __check_regex(array_string):
-            error = 0
-            for dna_string in array_string:
-                if not re.compile(DNA_WORD_REGEX):
-                    error = 1
-                if error:
-                    break
-            return not error
+            def __check_regex(array_string):
+               error = 0
+               for dna_string in array_string:
+                  if not re.compile(DNA_WORD_REGEX):
+                     error = 1
+                  if error:
+                     break
+               return not error
 
-        if not matrix:
-            _logger.debug("Matrix empty")
-            return False
-        if not __check_matrix_order(matrix):
-            _logger.debug("Bad order matrix %s" % str(matrix))
-            return False
-        if not __check_regex(matrix):
-            _logger.debug("Bad regex matrix %s" % str(matrix))
-            return False
+            if not matrix:
+              _logger.debug("Matrix empty")
+              return None
 
-        is_mutant = None
+            if not __check_matrix_order(matrix):
+               _logger.debug("Bad order matrix %s" % str(matrix))
+               return None
 
-        matrix_order = numpy.shape(matrix)[0]
-        contador = 0
-        while is_mutant is None:
+            if not __check_regex(matrix):
+               _logger.debug("Bad regex matrix %s" % str(matrix))
+               return None
+
+
+            is_mutant = None
+            matrix_order = numpy.shape(matrix)[0]
+            contador = 0
             for dna_word in matrix:
-                contador += positive_seq.search(dna_word) != None
-            if contador > COUNT_GT_POSITIVE:
-                _logger.debug("horizontal")
-                is_mutant = True
-                break
-            else:
-                matrix_letters = [[ch for ch in word] for word in matrix]
-                matrix_rotated = numpy.transpose(matrix_letters)
-                for dna_word in matrix_rotated:
-                    contador += positive_seq.search(''.join(dna_word)) != None
+                contador += dna_word.find('AAAA') != -1 or 0
+                contador += dna_word.find('CCCC') != -1 or 0
+                contador += dna_word.find('TTTT') != -1 or 0
+                contador += dna_word.find('GGGG') != -1 or 0
                 if contador > COUNT_GT_POSITIVE:
-                    _logger.debug("vertical")
+                    _logger.debug("horizontal")
                     is_mutant = True
                     break
-                else:
-                    diagonal = numpy.diagonal(matrix_letters)
-                    contador += positive_seq.search(''.join(diagonal)) != None
+            if not is_mutant:
+                matrix_letters = [[ch for ch in word] for word in matrix]
+                words = numpy.transpose(matrix_letters)
+                for dna_word in words:
+                    word = ''.join(dna_word)
+                    contador += word.find('AAAA') != -1 or 0
+                    contador += word.find('CCCC') != -1 or 0
+                    contador += word.find('TTTT') != -1 or 0
+                    contador += word.find('GGGG') != -1 or 0
                     if contador > COUNT_GT_POSITIVE:
-                        _logger.debug("diagonal 1")
+                        _logger.debug("vertical")
                         is_mutant = True
                         break
-                    else:
-                        for x in range(1, matrix_order):
-                            aux = numpy.transpose(matrix_letters).tolist()
-                            newm = aux[1:]
-                            newm.append(aux[0])
-                            newm = numpy.transpose(newm).tolist()
-                            diagonal = numpy.diagonal(newm)
-                            contador += positive_seq.search(''.join(diagonal)) != None
-                            if contador > COUNT_GT_POSITIVE:
-                                _logger.debug("diagonal 1")
-                                is_mutant = True
-                                break
-            is_mutant = False
-
-        _logger.debug("Resultado: %s %s %s" % (matrix, is_mutant, ':)' if is_mutant else ':('))
-        return is_mutant
+            if not is_mutant:
+                for dna_word in get_diagonals(matrix_letters):
+                    if len(dna_word) > COUNT_GT_LETTERS:
+                        word = ''.join(dna_word)
+                        contador += word.find('AAAA') != -1 or 0
+                        contador += word.find('CCCC') != -1 or 0
+                        contador += word.find('TTTT') != -1 or 0
+                        contador += word.find('GGGG') != -1 or 0
+                        if contador > COUNT_GT_POSITIVE:
+                            _logger.debug("diagonal")
+                            is_mutant = True
+                            break
+            if is_mutant == None:
+               is_mutant = False
+            _logger.debug("Resultado: %s %s %s" % (matrix, is_mutant, ':)' if is_mutant else ':('))
+            return is_mutant
+        except Exception as e:
+            _logger.warning("Error con %s" % str(matrix))
+            _logger.warning(e)
+            return None
 
 
 def run():
@@ -135,12 +151,7 @@ def run():
     else:
         array_string = [str(arg) for arg in sys.argv[1:]]
     matrix = get_matrix_from_array(array_string)
-    _logger.warning(datetime.datetime.now())
-    for x in range(0,999999):
-        DNAExpert().isMutant(matrix)
-    _logger.warning(datetime.datetime.now())
-
-
+    DNAExpert().isMutant(matrix)
 
 if __name__ == "__main__":
     run()
